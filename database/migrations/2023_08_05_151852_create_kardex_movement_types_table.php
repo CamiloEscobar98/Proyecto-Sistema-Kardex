@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kardex_movement_types', function (Blueprint $table) {
-            $table->id();
+            $table->tinyIncrements('id');
+            $table->string('name');
             $table->timestamps();
         });
     }

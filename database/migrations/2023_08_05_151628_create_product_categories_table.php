@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_categories', function (Blueprint $table) {
-            $table->id();
+            $table->tinyIncrements('id');
+            $table->string('name')->unique('uq_name_product_categories');
             $table->timestamps();
         });
     }
