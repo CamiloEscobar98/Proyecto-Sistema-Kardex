@@ -15,8 +15,8 @@ return new class extends Migration
             $table->smallIncrements('id');
             $table->unsignedTinyInteger('product_category_id');
             $table->string('name');
-            $table->text('description');
-            $table->decimal('price', 10, 2);
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2)->default(0.00);
             $table->unsignedInteger('stock');
             $table->timestamps();
 

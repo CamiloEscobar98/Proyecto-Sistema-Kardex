@@ -16,8 +16,10 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            //
-        ];
+        $name = "Producto {$this->faker->randomLetter()} {$this->faker->words(3, true)}";
+        $description = $this->faker->realText;
+        $price = $this->faker->randomFloat(2, 0, 100);
+        $stock = $this->faker->randomNumber(3);
+        return compact('name', 'description', 'price', 'stock');
     }
 }
