@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = $this->userService->search()->get();
+        $users = $this->userService->search(['except' => currentUser()->id])->get();
         return view('pages.admin_panel.users.index', compact('users'));
     }
 

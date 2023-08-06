@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="hidden sm:flex sm:items-center">
-                    <div class="relative ml-3">
+                    <div class="relative ml-2">
                         @auth
                             <x-dropdown align="left">
                                 <x-slot name="trigger">
