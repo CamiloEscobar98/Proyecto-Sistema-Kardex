@@ -60,6 +60,17 @@ class User extends Authenticatable
     ];
 
     /**
+     * Set the Password
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setPasswordAttribute($value)
+    {
+        return $this->attributes['password'] = bcrypt($value);
+    }
+
+    /**
      * Scope a query to only include Id
      *
      * @param  \Illuminate\Database\Eloquent\Builder $query

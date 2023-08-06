@@ -2,6 +2,9 @@
 
 return [
     'title' => 'Usuarios',
+    'form-titles' => [
+        'create' => 'Registrar Usuarios'
+    ],
     'attributes' => [
         'name' => 'Nombre completo',
         'email' => 'Correo electrónico',

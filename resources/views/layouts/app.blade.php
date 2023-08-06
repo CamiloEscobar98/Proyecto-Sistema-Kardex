@@ -52,7 +52,10 @@
                 icon: data['icon'],
                 showConfirmButton: false,
                 timer: 2000,
-                position: 'bottom-end'
+                position: 'bottom-end',
+                customClass: {
+
+                }
             });
         });
     </script>

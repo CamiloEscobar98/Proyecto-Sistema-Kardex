@@ -2,6 +2,9 @@
 
 return [
     'title' => 'Users',
+    'form-titles' => [
+        'create' => 'Create Users'
+    ],
     'attributes' => [
         'name' => 'Full Name',
         'email' => 'Email',
