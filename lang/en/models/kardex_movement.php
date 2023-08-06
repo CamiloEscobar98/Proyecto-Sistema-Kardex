@@ -16,8 +16,8 @@ return [
         'error-deleted' => 'Error al eliminar el movimiento kardex :name',
 
         'confirm_delete' => '¿Está seguro de eliminar el movimiento kardex?',
-        'saved' => 'Se ha registrado correctamente el movimiento kardex <b>:name</b>',
-        'updated' => 'Se ha actualizado correctamente el movimiento kardex <b>:name</b>',
-        'deleted' => 'Se ha eliminado correctamente el movimiento kardex <b>:name</b>',
+        'saved' => 'Se ha registrado correctamente el movimiento kardex :name',
+        'updated' => 'Se ha actualizado correctamente el movimiento kardex :name',
+        'deleted' => 'Se ha eliminado correctamente el movimiento kardex :name',
     ]
 ];

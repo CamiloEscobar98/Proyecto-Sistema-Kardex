@@ -48,7 +48,7 @@ class UserDelete extends Component
             $this->reset('modal');
         } catch (QueryException $qe) {
             DB::rollBack();
-            Log::error("Livewire/Components/AdminPanel/User/UserDelete| QueryExceptionMessage: {$qe->getMessage()}");
+            Log::error("Livewire/Components/AdminPanel/Users/UserDelete/Delete| QueryExceptionMessage: {$qe->getMessage()}");
         }
 
         $this->emit('alert', [

@@ -34,7 +34,7 @@
                                         <x-dropdown-link href="{{ route('admin_panel.users.index') }}">
                                             @lang('menu.administration_panel.submenu.users')
                                         </x-dropdown-link>
-                                        <x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('admin_panel.product_categories.index') }}">
                                             @lang('menu.administration_panel.submenu.product_categories')
                                         </x-dropdown-link>
                                         <x-dropdown-link>

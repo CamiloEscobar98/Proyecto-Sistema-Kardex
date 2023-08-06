@@ -63,7 +63,7 @@ class UserEdit extends Component
             $icon = 'success';
         } catch (QueryException $qe) {
             DB::rollBack();
-            Log::error("Livewire/Components/User/UserEdit/Edit| QueryExceptionMessage: {$qe->getMessage()}");
+            Log::error("Livewire/Components/Users/UserEdit/Update| QueryExceptionMessage: {$qe->getMessage()}");
         }
 
         $this->emit('alert', [

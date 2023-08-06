@@ -13,7 +13,7 @@ class UserFilter extends Component
         return view('livewire.admin-panel.users.user-filter');
     }
 
-    function search()
+    public function search()
     {
         $params = array_filter($this->only(['name', 'email']));
         $this->emitTo('admin-panel.users.user-list', 'load', $params);

@@ -21,8 +21,8 @@ return [
         'error-deleted' => 'Error while deleting the product :name',
 
         'confirm_delete' => 'Are you sure to delete the product?',
-        'saved' => 'The product <b>:name</b> has been successfully saved.',
-        'updated' => 'The product <b>:name</b> has been successfully updated.',
-        'deleted' => 'The product <b>:name</b> has been successfully deleted.',
+        'saved' => 'The product :name has been successfully saved.',
+        'updated' => 'The product :name has been successfully updated.',
+        'deleted' => 'The product :name has been successfully deleted.',
     ]
 ];

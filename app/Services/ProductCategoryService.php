@@ -11,6 +11,6 @@ class ProductCategoryService extends AbstractModelService
 
     public function __construct(ProductCategoryRepository $productCategoryRepository)
     {
-        $this->productCategoryRepository = $productCategoryRepository;
+        $this->repository = $productCategoryRepository;
     }
 }

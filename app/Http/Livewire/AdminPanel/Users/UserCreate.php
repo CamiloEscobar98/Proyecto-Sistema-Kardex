@@ -50,7 +50,7 @@ class UserCreate extends Component
             $this->reset(['name', 'email']);
         } catch (QueryException $qe) {
             DB::rollBack();
-            Log::error("Livewire/Components/AdminPanel/User/UserCreate/Save| QueryExceptionMessage: {$qe->getMessage()}");
+            Log::error("Livewire/Components/AdminPanel/Users/UserCreate/Save| QueryExceptionMessage: {$qe->getMessage()}");
         }
 
         $this->emit('alert', [

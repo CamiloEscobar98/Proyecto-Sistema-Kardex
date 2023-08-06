@@ -41,12 +41,4 @@ class UserController extends Controller
         $user = $this->userService->search(compact('id'))->first();
         return view('pages.admin_panel.users.show', compact('user'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 }
