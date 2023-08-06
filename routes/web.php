@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminPanel\UserController;
 use App\Http\Controllers\AdminPanel\ProductCategoryController;
+use App\Http\Controllers\AdminPanel\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,9 @@ Route::middleware([
         Route::get('product_categories', [ProductCategoryController::class, 'index'])->name('product_categories.index');
         Route::get('product_categories/create', [ProductCategoryController::class, 'create'])->name('product_categories.create');
         Route::get('product_categories/{product_category}', [ProductCategoryController::class, 'show'])->name('product_categories.show');
+
+        Route::get('products', [ProductController::class, 'index'])->name('products.index');
+        Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
+        Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
     });
 });

@@ -10,6 +10,10 @@ return [
     'attributes' => [
         'name' => 'Product Category Name',
     ],
+    'prepend-values' => [
+        'single' => '---Seleccionar categoria de Producto',
+        'multiple' => '---Seleccionar categorias de Productos'
+    ],
     'seeders' => [
         'title' => '### CREATING PRODUCT CATEGORIES ###',
         'ask' => 'How many Product Categories do you want to create for the development environment?',
