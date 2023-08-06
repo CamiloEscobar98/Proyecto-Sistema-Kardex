@@ -39,7 +39,7 @@ abstract class AbstractModelService
      * @param array $withCount
      * @return Builder
      */
-    function search(array $params = [], array $select, array $with = [], array $withCount = []): Builder
+    function search(array $params = [], array $select = null, array $with = [], array $withCount = []): Builder
     {
         /** @var Builder $query */
         return $this->repository->getModel()
