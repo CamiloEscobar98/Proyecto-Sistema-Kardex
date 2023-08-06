@@ -43,6 +43,18 @@
     @stack('modals')
 
     @livewireScripts
+
+    <script>
+        Livewire.on('alert', data => {
+            Swal.fire({
+                title: data['title'],
+                text: data['text'],
+                icon: data['icon'],
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -15,17 +15,17 @@ abstract class AbstractModelService
         $this->repository = $repository;
     }
 
-    function create(array $params): void
+    public function create(array $params): void
     {
         $this->repository->create($params);
     }
 
-    function update($id, array $params)
+    public function update($id, array $params)
     {
         return $this->repository->update($id, $params);
     }
 
-    function delete($id): void
+    public function delete($id): void
     {
         $this->repository->delete($id);
     }

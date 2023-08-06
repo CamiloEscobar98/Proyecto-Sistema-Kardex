@@ -9,6 +9,14 @@
         <x-slot name="content">
             <p class="font-bold uppercase">@lang('models/user.messages.confirm_delete')</p>
         </x-slot>
-        <x-slot name="footer"></x-slot>
+        <x-slot name="footer">
+            <x-secondary-button wire:click="$toggle('modal')" wire:loading.attr="disabled">
+                {{ __('Cancel') }}
+            </x-secondary-button>
+
+            <x-danger-button class="ml-3" wire:click="delete" wire:loading.attr="disabled">
+                {{ __('Delete') }}
+            </x-danger-button>
+        </x-slot>
     </x-confirmation-modal>
 </div>
