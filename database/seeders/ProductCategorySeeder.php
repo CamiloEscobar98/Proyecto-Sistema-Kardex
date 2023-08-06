@@ -26,10 +26,9 @@ class ProductCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $this->info("###CREANDO CATEGORÍAS DE PRODUCTOS###");
+        $this->info(__('models/product_category.seeders.title'));
         if (!isProductionEnv()) {
-            $randomNum = (int)$this->command->ask("¿Cuántas Categorías de Productos desea crear para el 
-            ambiente de desarrollo? \nPor defecto se crearán 5 Categorías de Productos.", 5);
+            $randomNum = (int)$this->command->ask(__('models/product_category.seeders.ask'), 5);
             $randomNum = !is_numeric($randomNum) || $randomNum <= 0 ? 5 : $randomNum;
             $models = $this->productCategoryRepository->makeModels($randomNum);
 
@@ -37,12 +36,12 @@ class ProductCategorySeeder extends Seeder
             $this->info("\n");
             foreach ($models as $index => $item) {
                 $current = $index + 1;
-                $this->info("[$current]. Creando Categoría de Productos: '{$item->name}'");
+                $name = $item->name;
+                $this->info(__('models/product_category.seeders.saved', compact('current', 'name')));
                 $item->save();
-                $this->command->getOutput()->progressAdvance();
             }
             $this->command->getOutput()->progressFinish();
         }
-        $this->info("###CATEGORÍAS DE PRODUCTOS REGISTRADOS###\n");
+        $this->info(__('models/product_category.seeders.end'));
     }
 }

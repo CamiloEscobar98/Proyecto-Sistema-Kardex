@@ -14,5 +14,12 @@ class KardexMovement extends Model
      *
      * @var array
      */
-    protected $fillable = ['product_id', 'kardex_movement_type_id', 'affected_units', 'stock_before', 'stock_after', 'movement_at'];
+    protected $fillable = [
+        'product_id',
+        'kardex_movement_type_id',
+        'affected_units',
+        'stock_before',
+        'stock_after',
+        'movement_at'
+    ];
 }
