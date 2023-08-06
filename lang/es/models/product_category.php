@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'title' => 'Categorías de Producto',
+    'title' => 'Categoría de Producto',
     'form-titles' => [
         'create' => 'Registrar Categorías de Productos',
-        'show' => 'Visualizar Informacion de Categoría de Productos',
-        'edit' => 'Actualizar Información de Categoría de Productos'
+        'show' => 'Visualizar Informacion de Categoría de Producto',
+        'edit' => 'Actualizar Información de Categoría de Producto'
     ],
     'attributes' => [
         'name' => 'Nombre de Categoría de Producto',

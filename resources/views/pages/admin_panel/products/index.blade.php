@@ -6,15 +6,15 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <x-button-link class="mb-4" href="{{ route('admin_panel.product_categories.create') }}">
+        <div class="max-w-screen-xl mx-auto sm:px-6 lg:px-8">
+            <x-button-link class="mb-4" href="{{ route('admin_panel.products.create') }}">
                 @lang('buttons.add')
             </x-button-link>
             <div class="overflow-hidden bg-white shadow-xl dark:bg-gray-800 sm:rounded-lg">
                 @livewire('admin-panel.products.product-filter')
             </div>
         </div>
-        <div class="mx-auto mt-10 max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-screen-xl mx-auto mt-10 sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-xl dark:bg-gray-800 sm:rounded-lg">
                 @livewire('admin-panel.products.product-list', compact('products'))
             </div>

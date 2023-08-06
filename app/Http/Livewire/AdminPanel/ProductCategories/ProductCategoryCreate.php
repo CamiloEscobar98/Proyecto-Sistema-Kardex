@@ -26,8 +26,8 @@ class ProductCategoryCreate extends Component
     {
         $this->validate();
 
-        /** @var ProductCategoryService $userService */
-        $userService = app(ProductCategoryService::class);
+        /** @var ProductCategoryService $productCategoryService */
+        $productCategoryService = app(ProductCategoryService::class);
 
         $data = $this->only(['name']);
         $name = $data['name'];
@@ -38,7 +38,7 @@ class ProductCategoryCreate extends Component
 
         try {
             DB::beginTransaction();
-            $userService->create($data);
+            $productCategoryService->create($data);
             DB::commit();
 
             $title = __('messages.success');

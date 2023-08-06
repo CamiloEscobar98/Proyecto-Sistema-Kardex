@@ -213,5 +213,9 @@ return [
         'updated_at'               => 'updated at',
         'username'                 => 'username',
         'year'                     => 'year',
+
+        /** Custom attributes */
+        'product_category_id' => 'product category',
+        'stock'                    => 'stock',
     ],
 ];

@@ -2,6 +2,11 @@
 
 return [
     'title' => 'Products',
+    'form-titles' => [
+        'create' => 'Create Product',
+        'show' => 'View Product Information',
+        'edit' => 'Update Product Information'
+    ],
     'attributes' => [
         'product_category_id' => 'Product Category',
         'name' => 'Product Name',
