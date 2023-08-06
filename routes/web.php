@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::prefix('admin-panel')->name('admin_panel.')->group(function () {
+        Route::get('users', [UserController::class, 'index'])->name('users.index');
+    });
 });

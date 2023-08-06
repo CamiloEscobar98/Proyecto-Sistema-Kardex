@@ -19,29 +19,31 @@
 
                 <div class="hidden sm:flex sm:items-center">
                     <div class="relative ml-3">
-                        <x-dropdown align="left">
-                            <x-slot name="trigger">
-                                <span class="inline-flex rounded-md">
-                                    <button type="button"
-                                        class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md dark:text-gray-400 dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700">
-                                        @lang('menu.administration_panel.title')
-                                    </button>
-                                </span>
-                            </x-slot>
-                            <x-slot name="content">
-                                <div class="w-auto">
-                                    <x-dropdown-link>
-                                        @lang('menu.administration_panel.submenu.users')
-                                    </x-dropdown-link>
-                                    <x-dropdown-link>
-                                        @lang('menu.administration_panel.submenu.product_categories')
-                                    </x-dropdown-link>
-                                    <x-dropdown-link>
-                                        @lang('menu.administration_panel.submenu.products')
-                                    </x-dropdown-link>
-                                </div>
-                            </x-slot>
-                        </x-dropdown>
+                        @auth
+                            <x-dropdown align="left">
+                                <x-slot name="trigger">
+                                    <span class="inline-flex rounded-md">
+                                        <button type="button"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md dark:text-gray-400 dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700">
+                                            @lang('menu.administration_panel.title')
+                                        </button>
+                                    </span>
+                                </x-slot>
+                                <x-slot name="content">
+                                    <div class="w-auto">
+                                        <x-dropdown-link href="{{ route('admin_panel.users.index') }}">
+                                            @lang('menu.administration_panel.submenu.users')
+                                        </x-dropdown-link>
+                                        <x-dropdown-link>
+                                            @lang('menu.administration_panel.submenu.product_categories')
+                                        </x-dropdown-link>
+                                        <x-dropdown-link>
+                                            @lang('menu.administration_panel.submenu.products')
+                                        </x-dropdown-link>
+                                    </div>
+                                </x-slot>
+                            </x-dropdown>
+                        @endauth
                     </div>
                 </div>
             </div>
