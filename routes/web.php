@@ -29,5 +29,6 @@ Route::middleware([
     Route::prefix('admin-panel')->name('admin_panel.')->group(function () {
         Route::get('users', [UserController::class, 'index'])->name('users.index');
         Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+        Route::get('users/{user}', [UserController::class, 'show'])->name('users.show');
     });
 });

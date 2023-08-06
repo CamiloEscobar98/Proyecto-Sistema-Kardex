@@ -19,8 +19,9 @@
                     <td class="px-6 py-3 text-left">{{ $item->updated_at }}</td>
                     <td class="w-fit">
                         <div class="grid grid-flow-col grid-rows-1 gap-1">
-                            <a href="" class="px-1 py-1 text-center text-white bg-indigo-600 rounded-l-3xl"><i
-                                    class="fas fa-eye"></i></a>
+                            <a href="{{ route('admin_panel.users.show', $item) }}"
+                                class="px-1 py-1 text-center text-white bg-indigo-600 rounded-l-3xl"><i
+                                    class="fas fa-edit"></i></a>
                             @livewire('admin-panel.users.user-delete', ['user' => $item], key("user-delete-{$item->id}"))
                         </div>
                     </td>

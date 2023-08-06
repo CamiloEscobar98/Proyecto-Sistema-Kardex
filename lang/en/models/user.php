@@ -3,7 +3,9 @@
 return [
     'title' => 'Users',
     'form-titles' => [
-        'create' => 'Create Users'
+        'create' => 'Create Users',
+        'show' => 'Display User Information',
+        'edit' => 'Update User Information'
     ],
     'attributes' => [
         'name' => 'Full Name',

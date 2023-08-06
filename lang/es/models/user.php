@@ -3,7 +3,9 @@
 return [
     'title' => 'Usuarios',
     'form-titles' => [
-        'create' => 'Registrar Usuarios'
+        'create' => 'Registrar Usuarios',
+        'show' => 'Visualizar Informacion de Usuario',
+        'edit' => 'Actualizar Información de Usuario'
     ],
     'attributes' => [
         'name' => 'Nombre completo',
