@@ -34,7 +34,7 @@ class ProductFilter extends Component
     {
         /** @var ProductCategoryRepository $productCategoryRepositroy */
         $productCategoryRepositroy = app(ProductCategoryRepository::class);
-        $this->productCategories = $productCategoryRepositroy->all()->pluck('name')
-            ->prepend(__('models/product_category.prepend-values.single'));
+        $this->productCategories = $productCategoryRepositroy->all()->pluck('name', 'id')
+            ->prepend(__('models/product_category.prepend-values.single'), 0);
     }
 }

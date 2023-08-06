@@ -58,7 +58,6 @@ class ProductCreate extends Component
 
         $data = $this->only(['product_category_id', 'name', 'description', 'price', 'stock']);
         $name = $data['name'];
-        // dd($data);
 
         $title = __('messages.error');
         $text = __('models/product.messages.error-saved', compact('name'));
