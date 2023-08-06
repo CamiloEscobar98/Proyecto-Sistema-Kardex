@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'filters' => 'Filters',
     'created_at' => 'Created At',
     'updated_at' => 'Updated At',
 

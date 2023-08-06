@@ -51,7 +51,8 @@
                 text: data['text'],
                 icon: data['icon'],
                 showConfirmButton: false,
-                timer: 2000
+                timer: 2000,
+                position: 'bottom-end'
             });
         });
     </script>

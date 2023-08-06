@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'filters' => 'Filtros',
     'created_at' => 'Fecha de registro',
     'updated_at' => 'Fecha de modificación',
 
