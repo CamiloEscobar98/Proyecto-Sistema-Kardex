@@ -2,12 +2,21 @@
 
 return [
     'title' => 'Products',
+    'form-titles' => [
+        'create' => 'Create Product',
+        'show' => 'View Product Information',
+        'edit' => 'Update Product Information'
+    ],
     'attributes' => [
         'product_category_id' => 'Product Category',
         'name' => 'Product Name',
         'description' => 'Product Info',
         'price' => 'Product Price',
         'stock' => 'Product Stock',
+    ],
+    'prepend-values' => [
+        'single' => '---Select Product',
+        'multiple' => '---Select Products'
     ],
     'seeders' => [
         'title' => '### CREATING PRODUCTS ###',
@@ -21,8 +30,8 @@ return [
         'error-deleted' => 'Error while deleting the product :name',
 
         'confirm_delete' => 'Are you sure to delete the product?',
-        'saved' => 'The product <b>:name</b> has been successfully saved.',
-        'updated' => 'The product <b>:name</b> has been successfully updated.',
-        'deleted' => 'The product <b>:name</b> has been successfully deleted.',
+        'saved' => 'The product :name has been successfully saved.',
+        'updated' => 'The product :name has been successfully updated.',
+        'deleted' => 'The product :name has been successfully deleted.',
     ]
 ];

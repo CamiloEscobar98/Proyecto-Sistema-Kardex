@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = $this->userService->search()->get();
+        $users = $this->userService->search(['except' => currentUser()->id])->get();
         return view('pages.admin_panel.users.index', compact('users'));
     }
 
@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin_panel.users.create');
     }
 
     /**
@@ -38,14 +38,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+        $user = $this->userService->search(compact('id'))->first();
+        return view('pages.admin_panel.users.show', compact('user'));
     }
 }

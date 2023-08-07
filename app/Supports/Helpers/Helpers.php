@@ -2,6 +2,15 @@
 
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+
+if (!function_exists('currentUser')) {
+    function currentUser(): \App\Models\User
+    {
+        return Auth::user();
+    }
+}
+
 
 if (!function_exists('isProductionEnv')) {
     /**

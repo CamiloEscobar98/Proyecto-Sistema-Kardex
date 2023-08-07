@@ -11,6 +11,6 @@ class KardexMovementService extends AbstractModelService
 
     public function __construct(KardexMovementRepository $kardexMovementRepository)
     {
-        $this->kardexMovementRepository = $kardexMovementRepository;
+        $this->repository = $kardexMovementRepository;
     }
 }

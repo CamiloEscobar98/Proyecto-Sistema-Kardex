@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="hidden sm:flex sm:items-center">
-                    <div class="relative ml-3">
+                    <div class="relative ml-2">
                         @auth
                             <x-dropdown align="left">
                                 <x-slot name="trigger">
@@ -34,11 +34,14 @@
                                         <x-dropdown-link href="{{ route('admin_panel.users.index') }}">
                                             @lang('menu.administration_panel.submenu.users')
                                         </x-dropdown-link>
-                                        <x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('admin_panel.product_categories.index') }}">
                                             @lang('menu.administration_panel.submenu.product_categories')
                                         </x-dropdown-link>
-                                        <x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('admin_panel.products.index') }}">
                                             @lang('menu.administration_panel.submenu.products')
+                                        </x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('admin_panel.kardex_movements.index') }}">
+                                            @lang('menu.administration_panel.submenu.karedx_movements')
                                         </x-dropdown-link>
                                     </div>
                                 </x-slot>

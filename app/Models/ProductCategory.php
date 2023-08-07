@@ -17,6 +17,19 @@ class ProductCategory extends Model
     protected $fillable = ['name'];
 
     /**
+     * Scope a query to only include Id
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @param string $value
+     * 
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeById($query, string $value)
+    {
+        $query->where("{$this->getTable()}.id", $value);
+    }
+
+    /**
      * Scope a query to only include name.
      *
      * @param  \Illuminate\Database\Eloquent\Builder $query

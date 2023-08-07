@@ -2,8 +2,17 @@
 
 return [
     'title' => 'Product Categories',
+    'form-titles' => [
+        'create' => 'Create Product Categories',
+        'show' => 'View Product Category Information',
+        'edit' => 'Update Product Category Information'
+    ],
     'attributes' => [
         'name' => 'Product Category Name',
+    ],
+    'prepend-values' => [
+        'single' => '---Select Product Category',
+        'multiple' => '---Select Product Categories'
     ],
     'seeders' => [
         'title' => '### CREATING PRODUCT CATEGORIES ###',
@@ -17,9 +26,9 @@ return [
         'error-deleted' => 'Error while deleting the product category :name',
 
         'confirm_delete' => 'Are you sure to delete the product category?',
-        'saved' => 'The product category <b>:name</b> has been successfully saved.',
-        'updated' => 'The product category <b>:name</b> has been successfully updated.',
-        'password_updated' => 'The product category password <b>:name</b> has been successfully updated.',
-        'deleted' => 'The product category <b>:name</b> has been successfully deleted.',
+        'saved' => 'The product category :name has been successfully saved.',
+        'updated' => 'The product category :name has been successfully updated.',
+        'password_updated' => 'The product category password :name has been successfully updated.',
+        'deleted' => 'The product category :name has been successfully deleted.',
     ]
 ];

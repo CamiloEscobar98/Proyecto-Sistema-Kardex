@@ -2,12 +2,21 @@
 
 return [
     'title' => 'Productos',
+    'form-titles' => [
+        'create' => 'Registrar Producto',
+        'show' => 'Visualizar Informacion de Producto',
+        'edit' => 'Actualizar Información de Producto'
+    ],
     'attributes' => [
         'product_category_id' => 'Categoría de Producto',
         'name' => 'Nombre de Producto',
         'description' => 'Descripción de Producto',
         'price' => 'Precio de Producto',
         'stock' => 'Cantidad Actual de Producto',
+    ],
+    'prepend-values' => [
+        'single' => '---Seleccionar Producto',
+        'multiple' => '---Seleccionars Productos'
     ],
     'seeders' => [
         'title' => '### REGISTRANDO PRODUCTOS ###',
@@ -21,8 +30,8 @@ return [
         'error-deleted' => 'Error al eliminar el producto :name',
 
         'confirm_delete' => '¿Está seguro de eliminar el producto?',
-        'saved' => 'Se ha registrado correctamente el producto <b>:name</b>',
-        'updated' => 'Se ha actualizado correctamente el producto <b>:name</b>',
-        'deleted' => 'Se ha eliminado correctamente el producto <b>:name</b>',
+        'saved' => 'Se ha registrado correctamente el producto :name',
+        'updated' => 'Se ha actualizado correctamente el producto :name',
+        'deleted' => 'Se ha eliminado correctamente el producto :name',
     ]
 ];

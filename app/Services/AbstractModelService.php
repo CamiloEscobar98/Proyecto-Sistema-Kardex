@@ -15,17 +15,17 @@ abstract class AbstractModelService
         $this->repository = $repository;
     }
 
-    function create(array $params): void
+    public function create(array $params): void
     {
         $this->repository->create($params);
     }
 
-    function update($id, array $params)
+    public function update($id, array $params)
     {
         return $this->repository->update($id, $params);
     }
 
-    function delete($id): void
+    public function delete($id): void
     {
         $this->repository->delete($id);
     }
@@ -39,7 +39,7 @@ abstract class AbstractModelService
      * @param array $withCount
      * @return Builder
      */
-    function search(array $params = [], array $select = null, array $with = [], array $withCount = []): Builder
+    public function search(array $params = [], array $select = null, array $with = [], array $withCount = [])
     {
         /** @var Builder $query */
         return $this->repository->getModel()
@@ -49,9 +49,6 @@ abstract class AbstractModelService
             })
             ->when($params['name'] ?? null, function ($query, $value) {
                 return $query->byName($value);
-            })
-            ->when($params['slug'] ?? null, function ($query, $value) {
-                return $query->bySlug($value);
             })
             ->with($with)
             ->withCount($withCount);
