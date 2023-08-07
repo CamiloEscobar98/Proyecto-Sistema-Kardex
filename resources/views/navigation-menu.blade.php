@@ -40,6 +40,9 @@
                                         <x-dropdown-link href="{{ route('admin_panel.products.index') }}">
                                             @lang('menu.administration_panel.submenu.products')
                                         </x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('admin_panel.kardex_movements.index') }}">
+                                            @lang('menu.administration_panel.submenu.karedx_movements')
+                                        </x-dropdown-link>
                                     </div>
                                 </x-slot>
                             </x-dropdown>

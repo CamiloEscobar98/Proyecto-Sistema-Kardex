@@ -14,6 +14,10 @@ return [
         'price' => 'Product Price',
         'stock' => 'Product Stock',
     ],
+    'prepend-values' => [
+        'single' => '---Select Product',
+        'multiple' => '---Select Products'
+    ],
     'seeders' => [
         'title' => '### CREATING PRODUCTS ###',
         'ask' => 'How many Products do you want to create for the development environment?',

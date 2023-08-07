@@ -11,6 +11,21 @@ class ProductService extends AbstractModelService
         $this->repository = $productRepository;
     }
 
+    public function changeStock($productId, $stockCurrent, $affectedUnits, $kardexMovementType)
+    {
+        $newStock = 0;
+        switch ($kardexMovementType) {
+            case '1':
+                $newStock = $stockCurrent + $affectedUnits;
+                break;
+            case '2':
+                $newStock = $stockCurrent - $affectedUnits;
+                break;
+        }
+        $this->update($productId, ['stock' => $newStock]);
+        return $newStock;
+    }
+
     /** 
      * Search By Keywords 
      * 

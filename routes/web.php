@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\UserController;
 use App\Http\Controllers\AdminPanel\ProductCategoryController;
 use App\Http\Controllers\AdminPanel\ProductController;
+use App\Http\Controllers\AdminPanel\KardexMovementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +42,8 @@ Route::middleware([
         Route::get('products', [ProductController::class, 'index'])->name('products.index');
         Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
         Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
+
+        Route::get('kardex_movements', [KardexMovementController::class, 'index'])->name('kardex_movements.index');
+        Route::get('kardex_movements/create', [KardexMovementController::class, 'create'])->name('kardex_movements.create');
     });
 });

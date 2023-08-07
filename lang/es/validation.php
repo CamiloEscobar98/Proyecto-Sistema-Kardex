@@ -215,7 +215,8 @@ return [
         'year'                     => 'año',
 
         /** Custom attributes */
-        'product_category_id' => 'categoria de producto',
+        'product_category_id'      => 'categoria de producto',
         'stock'                    => 'cantidad actual',
+        'affected_units'           => 'unidades afectadas'
     ],
 ];

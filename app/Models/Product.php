@@ -34,6 +34,19 @@ class Product extends Model
     }
 
     /**
+     * Scope a query to only include Id
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @param string $value
+     * 
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeById($query, string $value)
+    {
+        $query->where("{$this->getTable()}.id", $value);
+    }
+
+    /**
      * Scope a query to only include product category.
      *
      * @param  \Illuminate\Database\Eloquent\Builder $query

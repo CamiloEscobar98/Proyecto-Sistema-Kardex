@@ -217,5 +217,6 @@ return [
         /** Custom attributes */
         'product_category_id' => 'product category',
         'stock'                    => 'stock',
+        'affected_units'           => 'affected units'
     ],
 ];

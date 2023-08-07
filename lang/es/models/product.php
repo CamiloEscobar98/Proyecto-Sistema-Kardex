@@ -14,6 +14,10 @@ return [
         'price' => 'Precio de Producto',
         'stock' => 'Cantidad Actual de Producto',
     ],
+    'prepend-values' => [
+        'single' => '---Seleccionar Producto',
+        'multiple' => '---Seleccionars Productos'
+    ],
     'seeders' => [
         'title' => '### REGISTRANDO PRODUCTOS ###',
         'ask' => '¿Cuántos Productos desea crear para el ambiente de desarrollo?',

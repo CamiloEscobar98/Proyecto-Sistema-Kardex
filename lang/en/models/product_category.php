@@ -11,8 +11,8 @@ return [
         'name' => 'Product Category Name',
     ],
     'prepend-values' => [
-        'single' => '---Seleccionar categoria de Producto',
-        'multiple' => '---Seleccionar categorias de Productos'
+        'single' => '---Select Product Category',
+        'multiple' => '---Select Product Categories'
     ],
     'seeders' => [
         'title' => '### CREATING PRODUCT CATEGORIES ###',
