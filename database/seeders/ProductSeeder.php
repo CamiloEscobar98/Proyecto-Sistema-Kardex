@@ -31,10 +31,9 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->info("###CREANDO PRODUCTOS###");
+        $this->info(__('models/product.seeders.title'));
         if (!isProductionEnv()) {
-            $randomNum = (int)$this->command->ask("¿Cuántos Productos desea crear para el 
-            ambiente de desarrollo? \nPor defecto se crearán 5 Productos.", 5);
+            $randomNum = (int)$this->command->ask(__('models/product.seeders.ask'), 5);
             $randomNum = !is_numeric($randomNum) || $randomNum <= 0 ? 5 : $randomNum;
             $models = $this->productRepository->makeModels($randomNum);
 
@@ -45,15 +44,15 @@ class ProductSeeder extends Seeder
             foreach ($models as $index => $item) {
                 $randomProductCategory = $productCategories->random(1)->first();
                 $current = $index + 1;
-                $this->info("[$current]. Creando Producto: '{$item->name}'");
+                $name = $item->name;
+                $this->info(__('models/product.seeders.saved', compact('current', 'name')));
 
                 /** @var \App\Models\Product $item */
                 $item->product_category_id = $randomProductCategory->id;
                 $item->save();
-                $this->command->getOutput()->progressAdvance();
             }
             $this->command->getOutput()->progressFinish();
         }
-        $this->info("###PRODUCTOS REGISTRADOS###\n");
+        $this->info(__('models/product.seeders.end'));
     }
 }

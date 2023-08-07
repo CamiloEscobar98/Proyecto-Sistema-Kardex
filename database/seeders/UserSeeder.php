@@ -27,11 +27,10 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->info("###CREANDO USUARIOS###");
+        $this->info(__('models/user.seeders.title'));
         $this->createDefaultUser();
         if (!isProductionEnv()) {
-            $randomNum = (int)$this->command->ask("¿Cuántos Usuarios desea crear para el 
-            ambiente de desarrollo? \nPor defecto se crearán 5 usuarios.", 5);
+            $randomNum = (int)$this->command->ask(__('models/user.seeders.ask'), 5);
             $randomNum = !is_numeric($randomNum) || $randomNum <= 0 ? 5 : $randomNum;
             $models = $this->userRepository->makeModels($randomNum);
 
@@ -39,13 +38,13 @@ class UserSeeder extends Seeder
             $this->info("\n");
             foreach ($models as $index => $item) {
                 $current = $index + 1;
-                $this->info("[$current]. Creando Usuario: '{$item->name}'");
+                $name = $item->name;
+                $this->info(__('models/user.seeders.saved', compact('current', 'name')));
                 $item->save();
-                $this->command->getOutput()->progressAdvance();
             }
             $this->command->getOutput()->progressFinish();
         }
-        $this->info("###USUARIOS REGISTRADOS###\n");
+        $this->info(__('models/user.seeders.end'));
     }
 
     /**
@@ -53,13 +52,12 @@ class UserSeeder extends Seeder
      */
     private function createDefaultUser(): void
     {
-        $this->info('Creando usuario administrador con todos los permisos registrados de la aplicación.
-        Correo Electrónico: camilo_escobar2398@outlook.com Contraseña: password');
+        $current = 0;
         $item = $this->userRepository->createOneModel([
             'name' => 'Andrés Yáñez',
             'email' => 'camilo_escobar2398@outlook.com',
         ]);
-        $this->info("\n-Creando Usuario:'{$item->name}'\n");
-        // $user->assignRole('admin');
+        $name = $item->name;
+        $this->info(__('models/user.seeders.saved', compact('current', 'name')));
     }
 }
